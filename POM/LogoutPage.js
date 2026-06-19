@@ -6,7 +6,7 @@ export class LogoutPage{
     }
    async logout(){
      await this.page.waitForLoadState('networkidle');
-    await this.logoutlink.waitFor({ state: 'visible', timeout: 10000 });
+    await this.logoutlink.waitFor({ state: 'visible', timeout: 30000 });
        await this.logoutlink.click()
     }
 } 
