@@ -26,6 +26,7 @@ export class RegisterPage{
      await   this.password.fill(register.password)
      await   this.confirmPassword.fill(register.confirmPassword)
      await   this.registerButton.click()
+     await expect(this.continue).toBeVisible({ timeout: 10000 });
       await  this.continue.click()
      await   this.newsLetter.fill(register.email)
      await   this.subscribeButton.click()
