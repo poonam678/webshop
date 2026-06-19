@@ -11,7 +11,7 @@ export class RegisterPage{
         this.password = page.locator('//input[@id="Password"]')
         this.confirmPassword = page.locator('//input[@id="ConfirmPassword"]')
         this.registerButton = page.locator('//input[@id="register-button"]')
-        this.continue = page.locator('(//input[@type="button"])[2]')
+        this.continue = page.locator('//input[@class="button-1 register-continue-button"]')
         this.newsLetter = page.locator('//input[@id="newsletter-email"]')
         this.subscribeButton = page.locator('//input[@value="Subscribe"]')
         
