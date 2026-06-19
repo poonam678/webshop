@@ -38,9 +38,22 @@ export class ReviewPage{
         await this.books.click()
         //sorting 
 
-        await selectOption(this.page,'//select[@id="products-orderby"]',"Name: A to Z")
+        /*await selectOption(this.page,'//select[@id="products-orderby"]',"Name: A to Z")
 
-        await selectOption(this.page,'//select[@id="products-pagesize"]',"4")
+        await selectOption(this.page,'//select[@id="products-pagesize"]',"4")*/
+
+        await Promise.all([
+  this.page.waitForURL(/orderby=5/),
+  this.page.locator('#products-orderby').selectOption({ label: 'Name: A to Z' })
+]);
+
+await Promise.all([
+  this.page.waitForURL(/pagesize=4/),
+  this.page.locator('#products-pagesize').selectOption('4')
+]);
+
+await this.productName1.first().waitFor();
+
         
         //to get the number of propducts 
         const productName=await this.productName1.allTextContents()
