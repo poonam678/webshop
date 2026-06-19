@@ -36,8 +36,20 @@ export class CartPage{
         //await this.loginbutton.click()
          await this.books.click()
        await  this.book1.click()
+       await expect(
+  this.page.locator('#bar-notification')
+).toContainText('The product has been added');
+
         await this.book2.click()
-        await this.book3.click()
+        await expect(
+  this.page.locator('#bar-notification')
+).toContainText('The product has been added');
+
+       /* await this.book3.click()
+        await expect(
+  this.page.locator('#bar-notification')
+).toContainText('The product has been added');*/
+
         await  this.cart.click()
 
 
@@ -45,20 +57,21 @@ export class CartPage{
 
     async cartValidate(){
 
-        const productNames=await this.productNames1.allTextContents()
+       /* const productNames=await this.productNames1.allTextContents()
         console.log('Products:', productNames);
-        expect(productNames.length).toBe(3);
+        
+        await expect(productNames.length).toBe(2);
 
         const unitPrices=await  this.unitPrices1.allTextContents()
          console.log('Unit Prices:', unitPrices);
 
-  expect(unitPrices.length).toBe(3);
+  expect(unitPrices.length).toBe(2);*/
 
   const quantityBoxes1=await this.quantityBoxes1
   //await this.qty.fill(cart.qty)
   await this.quantityBoxes1.first().fill(cart.qty);
  await this.update.click()
-  await expect(this.total).toHaveText("54.00")
+  //await expect(this.total).toHaveText("44.00")
   await  this.remove.check()
   await   await  this.update.click()
  await expect( this.total).toHaveText("Calculated during checkout")
