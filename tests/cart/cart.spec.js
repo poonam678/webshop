@@ -113,7 +113,8 @@ test("using POM",async({page})=>{
   let logout=new LogoutPage(page)
 
  await page.goto(register.url)
- await login.login1()
+await registerpage.registerUser()
+ //await login.login1()
   await cartpage.cartUpdate()
   await cartpage.cartValidate()
   await logout.logout()
