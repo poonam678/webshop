@@ -120,6 +120,9 @@ import { LogoutPage } from "../../POM/LogoutPage"
 ///********************************************** */
 ///USing POM //////
 test("using pom",async({page})=>{
+    
+    //adding changes
+
 
     let addresspage = new AddressPage(page)
     let registerpage = new RegisterPage(page)
