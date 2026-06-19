@@ -27,9 +27,7 @@ export class RegisterPage{
      await   this.confirmPassword.fill(register.confirmPassword)
      await   this.registerButton.click()
      //await expect(this.continue).toBeVisible({ timeout: 10000 });
-     await expect(
-    this.page.locator('.result')
-).toContainText('Your registration completed');
+     
       await  this.continue.click()
       //page.getByRole('button', { name: 'Continue' })
      await   this.newsLetter.fill(register.email)

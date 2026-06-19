@@ -120,14 +120,14 @@ import { LogoutPage } from "../../POM/LogoutPage"
 ///********************************************** */
 ///USing POM //////
 test("using pom",async({page})=>{
-    
+
     //adding changes
 
 
     let addresspage = new AddressPage(page)
     let registerpage = new RegisterPage(page)
     let logoutpage = new LogoutPage(page)
-
+//final trying 
     await page.goto(register.url)
     await registerpage.registerUser()
     await addresspage.addAddress()
