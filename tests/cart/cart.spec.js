@@ -114,7 +114,7 @@ test("using POM",async({page})=>{
 
  await page.goto(register.url)
 await registerpage.registerUser()
- //await login.login1()
+ //await login.login1() again 
   await cartpage.cartUpdate()
   await cartpage.cartValidate()
   await logout.logout()
