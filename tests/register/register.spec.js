@@ -1,11 +1,11 @@
 
-import {test} from "@playwright/test"
+/*import {test} from "@playwright/test"
 import register from "../../testData/register.json"
 
 //import { selectOption } from "../../utils/utils1"
 import { AddressPage } from "../../POM/AddressPage"
 import { RegisterPage } from "../../POM/RegisterPage"
-import { LogoutPage } from "../../POM/LogoutPage"
+import { LogoutPage } from "../../POM/LogoutPage" */
 
 // test("register",async({page})=>{
 //     await page.goto("https://demowebshop.tricentis.com/")
@@ -119,7 +119,7 @@ import { LogoutPage } from "../../POM/LogoutPage"
 
 ///********************************************** */
 ///USing POM //////
-test("using pom",async({page})=>{
+/*test("using pom",async({page})=>{
 
     //adding changes
 
@@ -132,4 +132,4 @@ test("using pom",async({page})=>{
     await registerpage.registerUser()
     await addresspage.addAddress()
     await logoutpage.logout()
-}) 
+}) */
